@@ -41,9 +41,9 @@ You declare how you want your application executed in `Procfile` in the project 
 Create the app on the Cedar stack:
 
     :::term
-    $ heroku create --stack cedar
-    Creating high-lightning-129... done, stack is cedar
-    http://high-lightning-129.herokuapp.com/ | git@heroku.com:high-lightning-129.git
+    $ heroku apps:create
+    Creating polar-savannah-7781... done, stack is cedar
+    http://polar-savannah-7781.herokuapp.com/ | git@heroku.com:polar-savannah-7781.git
     Git remote heroku added
 
 Deploy your code:

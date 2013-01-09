@@ -1,7 +1,5 @@
 # Deploy a Java Web Application that launches with Jetty Runner
 
-Follow each step to build an app from scratch, or skip to the end get the source for this article. You can also use almost any existing Maven webapp project.
-
 ## Prerequisites
 
 * Basic Java knowledge, including an installed version of the JVM and Maven.

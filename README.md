@@ -46,6 +46,8 @@ Create the app on the Cedar stack:
     http://polar-savannah-7781.herokuapp.com/ | git@heroku.com:polar-savannah-7781.git
     Git remote heroku added
 
+	If you call heroku apps:create <application-name>, heroku will use that name instead of generating a new one.
+	
 Deploy your code:
 
     :::term

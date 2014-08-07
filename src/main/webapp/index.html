@@ -10,5 +10,23 @@
 		<canvas id="game"></canvas>
 		<p class="allow">Make game so much easier by allowing 'drag and drop' of invalid pieces: <input type="checkbox" name="allow" id="allow"></p>
 		<script src="Assets/Scripts/game.js"></script>
+
+		<form name="myform" action="viewProfile.html">
+Search: <input type='text' name='query' />
+<a href="javascript: doMagic()">Search</a>
+</form>
+<script type="text/javascript">
+function doMagic()
+{
+  document.myform.submit();
+}
+
+
+var query = location.search.replace("?", "")
+if(query)  {
+	var n = query.split("=")[1];
+	alert(n);
+}
+</script>
 	</body>
 </html>

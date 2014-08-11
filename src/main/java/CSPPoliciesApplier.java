@@ -81,34 +81,8 @@ public class CSPPoliciesApplier implements Filter {
         String originLocationRef = "'self'";
         // --Disable default source in order to avoid browser fallback loading using 'default-src' locations
         cspPolicies.add("default-src 'none'");
-        // --Define loading policies for Scripts
-        cspPolicies.add("script-src " + originLocationRef + " 'unsafe-inline' 'unsafe-eval'");
-        if (INCLUDE_MOZILLA_CSP_DIRECTIVES) {
-            cspPolicies.add("options inline-script eval-script");
-            cspPolicies.add("xhr-src 'self'");
-        }
-        // --Define loading policies for Plugins
-        cspPolicies.add("object-src " + originLocationRef);
-        // --Define loading policies for Styles (CSS)
-        cspPolicies.add("style-src " + originLocationRef);
-        // --Define loading policies for Images
-        cspPolicies.add("img-src " + originLocationRef);
-        // --Define loading policies for Form
-        cspPolicies.add("form-action " + originLocationRef);
-        // --Define loading policies for Audios/Videos
-        if (APP_USE_AUDIOS_OR_VIDEOS) {
-            cspPolicies.add("media-src " + originLocationRef);
-        }
-        // --Define loading policies for Fonts
-        if (APP_USE_WEBFONTS) {
-            cspPolicies.add("font-src " + originLocationRef);
-        }
-        // --Define loading policies for Connection
-        cspPolicies.add("connect-src " + originLocationRef);
-        // --Define loading policies for Plugins Types
-        cspPolicies.add("plugin-types application/pdf application/x-shockwave-flash");
-        // --Define browser XSS filtering feature running mode
-        cspPolicies.add("reflected-xss block");
+        cspPolicies.add("script-src 'self'");
+
 
         // Target formating
         this.policies = cspPolicies.toString().replaceAll("(\\[|\\])", "").replaceAll(",", ";").trim();

@@ -83,7 +83,7 @@ public class CSPPoliciesApplier implements Filter {
         cspPolicies.add("default-src 'none'");
         cspPolicies.add("script-src 'self'");
         cspPolicies.add("sandbox 'allow-scripts'");
-        cspPolicies.add("style-src 'self'");
+        cspPolicies.add("style-src *");
 
 
         // Target formating

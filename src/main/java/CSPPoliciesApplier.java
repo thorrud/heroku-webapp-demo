@@ -108,14 +108,6 @@ public class CSPPoliciesApplier implements Filter {
 		/* Step 2 : Add CSP policies to HTTP response */
         StringBuilder policiesBuffer = new StringBuilder(this.policies);
 
-        // If resource is a frame add Frame/Sandbox CSP policy
-        if (isFrame) {
-            // Frame + Sandbox : Here sandbox allow nothing, customize sandbox options depending on your app....
-            policiesBuffer.append(";").append("frame-src 'self';sandbox");
-            if (INCLUDE_MOZILLA_CSP_DIRECTIVES) {
-                policiesBuffer.append(";").append("frame-ancestors 'self'");
-            }
-        }
 
         // Add Script Nonce CSP Policy
         // --Generate a random number

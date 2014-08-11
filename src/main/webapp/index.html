@@ -5,17 +5,31 @@
 		<meta name="viewport" content="width=760, user-scalable=0">
 		<title>A puzzle</title>
 		<link rel="stylesheet" href="Assets/Styles/base.css">
+        <script src="Assets\Scripts\jQuery\jquery-2.1.1.min.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<canvas id="game"></canvas>
-		<p class="allow">Make game so much easier by allowing 'drag and drop' of invalid pieces: <input type="checkbox" name="allow" id="allow"></p>
-		<script src="Assets/Scripts/game.js"></script>
+		<!--<p class="allow">Make game so much easier by allowing 'drag and drop' of invalid pieces: <input type="checkbox" name="allow" id="allow"></p>
+		<script src="Assets/Scripts/game.js"></script>-->
 
-		<form name="myform" action="viewProfile.html">
-Search: <input type='text' name='query' />
-<a href="javascript: doMagic()">Search</a>
+		<form id="csp-submit" method="get" action="">
+            <div name="test">
+Search: <input type='text' name='query' value=""/>
+            <input type="submit" value="Search2" />
+                </div>
+            <div id="result">Resultat: </div>
+<!--<a href="javascript: doMagic()">Search</a> -->
 </form>
+        <span></span>
 <script type="text/javascript">
+    $("#csp-submit").submit(function(event)
+    {
+        $("span").html($("input:first").val());
+        $("input:first").val();
+        event.preventDefault();
+    });
+</script>
+<!--<script type="text/javascript">
 function doMagic()
 {
   document.myform.submit();
@@ -27,6 +41,6 @@ if(query)  {
 	var n = query.split("=")[1];
 	alert(n);
 }
-</script>
+</script>-->
 	</body>
 </html>

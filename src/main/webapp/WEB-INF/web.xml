@@ -3,5 +3,5 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Puzzle</display-name>
+  <display-name>CSP - XSS vulnerable site</display-name>
 </web-app>

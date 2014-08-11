@@ -80,9 +80,9 @@ public class CSPPoliciesApplier implements Filter {
         List<String> cspPolicies = new ArrayList<String>();
         String originLocationRef = "'self'";
         // --Disable default source in order to avoid browser fallback loading using 'default-src' locations
-        cspPolicies.add("default-src 'none'");
+        cspPolicies.add("default-src 'self'");
         cspPolicies.add("script-src 'self'");
-        cspPolicies.add("sandbox allow-same-origin allow-scripts allow-forms");
+
         cspPolicies.add("style-src *");
         cspPolicies.add("frame-src 'self'");
 

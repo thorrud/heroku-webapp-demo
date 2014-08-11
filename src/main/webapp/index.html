@@ -3,17 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=760, user-scalable=0">
-        <meta http-equiv="X-WebKit-CSP" content="'none'">
-		<title>A puzzle</title>
+		<title>CSP demo</title>
 		<link rel="stylesheet" href="Assets/Styles/base.css">
         <script src="Assets\Scripts\jQuery\jquery-2.1.1.min.js" type="text/javascript"></script>
+        <script src="Assets\Scripts\csp-demo.js" type="text/javascript"></script>
 
 	</head>
 	<body>
-		<canvas id="game"></canvas>
-		<!--<p class="allow">Make game so much easier by allowing 'drag and drop' of invalid pieces: <input type="checkbox" name="allow" id="allow"></p>
-		<script src="Assets/Scripts/game.js"></script>-->
-
 		<form id="csp-submit" method="get" action="">
             <div name="test">
 Search: <input type='text' name='query' value=""/>
@@ -23,37 +19,9 @@ Search: <input type='text' name='query' value=""/>
             <div class="button">
                 <input type="button" id="profiles" value="Les" />
             </div>
-<!--<a href="javascript: doMagic()">Search</a> -->
+
 </form>
         <span></span>
-<script type="text/javascript">
-    $("#csp-submit").submit(function(event)
-    {
 
-        $("input:first").val();
-        localStorage["name"] = $("input:first").val();
-        event.preventDefault();
-        return true;
-    });
-
-    $(document).ready(function() {
-        $("#profiles").click(function() {
-                    $("span").html(localStorage["name"]).val();
-        });
-    });
-</script>
-<!--<script type="text/javascript">
-function doMagic()
-{
-  document.myform.submit();
-}
-
-
-var query = location.search.replace("?", "")
-if(query)  {
-	var n = query.split("=")[1];
-	alert(n);
-}
-</script>-->
 	</body>
 </html>

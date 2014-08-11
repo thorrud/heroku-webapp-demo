@@ -176,4 +176,6 @@ public class CSPPoliciesApplier implements Filter {
     public void destroy() {
         // Not used
     }
+
+
 }

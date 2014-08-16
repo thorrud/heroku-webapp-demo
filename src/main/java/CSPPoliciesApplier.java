@@ -82,7 +82,7 @@ public class CSPPoliciesApplier implements Filter {
         // --Disable default source in order to avoid browser fallback loading using 'default-src' locations
         cspPolicies.add("default-src 'self'");
         cspPolicies.add("script-src 'self'");
-        cspPolicies.add("img-src *.facebook.com *akamihd.net");
+        cspPolicies.add("img-src *.facebook.com *.akamihd.net");
 
         cspPolicies.add("style-src *");
         cspPolicies.add("frame-src 'self'");

@@ -4,15 +4,16 @@
     $(document).ready(function() {
     
         $("#profiles").click(function() {
-            $("#csp-submit").submit(function(event) {
+            $("span").html($("#name").val());
+            
 
                 $("input:first").val();
                 localStorage["name"] = $("input:first").val();
                 event.preventDefault();
                 return true;
-            });
+        
+
             
-            $("span").html(localStorage["name"]).val();
         });
 
     $('#profilePic').on({

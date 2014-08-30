@@ -216,7 +216,6 @@ z-index: 301;
 }
 
 ._4f7n {
-background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAqCAMAAABFoMFOAAAAWlBMV…8/UxBxQDQuFwlpqgBZBq6+P+unVY1GnDgwqbD2zGz5e1lBdwvGGPE6OgAAAABJRU5ErkJggg==);
 background-repeat: repeat-x;
 background-size: auto;
 background-position: 0 0;
@@ -236,4 +235,8 @@ float: left;
 margin: 25px 0 0 0;
 padding: 0;
 }
+
+#name {
+    width: 250px;
+}  
 
